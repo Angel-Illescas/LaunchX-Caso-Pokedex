@@ -1,0 +1,245 @@
+/* General Settings */
+body{
+margin-top: 4%;
+background-image: url("./../../assets/img/Back.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+background-attachment: fixed;
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+}
+
+h6{
+font-size: 10px;
+margin: 2px;
+color: aliceblue;
+}
+
+.contMain{
+padding-left: 15%;
+padding-right: 15%;
+}
+
+.back{
+background-color: #fe0066c2;
+border-radius: 25px;
+border: solid 7px #000000; 
+}
+
+.divBottoms{
+display: flex; border-bottom: 7px solid black; 
+padding: 10px;
+}
+    
+/*  CIRCLES  */
+
+.cBlue{
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background: rgb(238,255,255);
+background: radial-gradient(circle, rgb(236, 248, 244) 0%, rgb(0, 229, 255) 60%);
+border: 7px solid white;	
+}
+
+.cRed{
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background: rgb(238,255,255);
+background: radial-gradient(circle, rgb(245, 170, 170) 0%, rgba(241,0,0,1) 50%);
+border: 3px solid rgb(0, 0, 0);
+margin-left: 15px;
+}
+.cYellow{
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background: rgb(238,255,255);
+background: radial-gradient(circle, rgb(252, 253, 168) 0%, rgb(251, 255, 35) 35%);
+border: 3px solid rgb(0, 0, 0);
+margin-left: 5px;
+}
+
+.cGreen{
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background: rgb(238,255,255);
+background: radial-gradient(circle, rgb(206, 253, 206) 0%, rgb(48, 241, 0) 50%);
+border: 3px solid rgb(0, 0, 0);
+margin-left: 5px;
+}
+
+/* Screen */
+
+.screen{
+height: 250px;
+background-color: aliceblue;
+border-bottom-left-radius: 50px;
+border: #000000 solid 5px;
+margin: 10px;
+padding: 5%;
+}
+
+.cRedL{
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: rgb(238,255,255);
+background: radial-gradient(circle, rgba(245, 120, 120) 0%, rgba(241,0,0,1) 50%);
+border: 3px solid rgb(0, 0, 0);
+margin:2px;
+margin-bottom: 10px;
+}
+
+.screenImg{
+height: 150px;
+border-radius: 10px;
+border: #000000 solid 4px;
+display: flex;
+justify-content:center
+}
+
+.cRedLow{
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background: rgb(238,255,255);
+background: radial-gradient(circle, rgb(245, 120, 120) 0%, rgba(241,0,0,1) 50%);
+border: 3px solid rgb(0, 0, 0);
+margin:2px;
+margin-bottom: 10px;
+}
+
+.cuadrado{
+height: 10px;
+width: 30px;
+border-top:solid black 3px ;
+border-bottom: black solid 3px;
+margin-top: 5px;
+}
+
+/* Low Buttoms Img */
+
+.recta{
+height: 10px;
+width: 50px;
+background-color: #44abfa;
+border: #000000 solid 3px;
+border-radius: 10px;
+margin: 5px;
+}
+
+.recta2{
+height: 10px;
+width: 50px;
+background-color: #fa5044;
+border: #000000 solid 3px;
+border-radius: 10px;
+margin: 5px;
+}
+
+.circleMando{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: rgb(238,255,255);
+background: radial-gradient(circle, rgb(75, 85, 85) 0%, rgb(4, 4, 4));
+border: 3px solid rgb(0, 0, 0);
+}
+
+/* Input */
+
+.form-control{
+background-color: #00ff73;
+border: #000000 3px solid;
+border-radius: 7px;
+color: #941d1d;
+}
+
+.cross{
+width: 90px;
+height: 90px;
+border-radius: 50px;
+background: linear-gradient(to bottom, transparent 35%,rgb(0, 0, 0) 35%, rgb(4, 4, 4) 65%, transparent 65%), 
+linear-gradient(to right, transparent 35%, rgb(0, 0, 0) 35%, rgb(0, 0, 0) 65%, transparent 65%);
+}
+
+/* Data Side */
+
+.dataSide{
+background-color: #333333;
+border: #000000 solid 6px;
+border-radius: 10px;
+padding: 10px;
+padding-top: 10px;
+margin: 5%;
+color: #00ff73;
+}
+
+.form-control:disabled, .form-control[readonly] {
+background-color: rgba(0, 0, 0, 0);
+border-color: #00000000;   
+}
+
+.input-group-text {
+background-color: #333333;
+color: #00ff73;
+border-color: #000000;
+}
+
+/* Progress bars */
+
+.progress-bar-striped{
+background-color: #00e5ff;
+}
+
+.contProgress{
+padding-left:10% ;
+padding-right: 10%;
+}
+
+/* Low Bottoms Right Side */
+
+.square{
+height: 50px;
+width: 50px;
+background-color:aliceblue;
+border: #000000 solid 5px;
+border-radius: 5px;
+margin-right: 2px;
+}
+
+.cicleYellowRight{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: rgb(238,255,255);
+background: radial-gradient(circle, rgb(252, 253, 168) 0%, rgb(251, 255, 35) 50%);
+border: 5px solid rgb(0, 0, 0);
+margin-right: 20px;
+}
+
+.contButtomsRight{
+padding-left:10% ;
+padding-right: 10%;
+margin-top: 15px;
+}
+
+.rectangle{
+width: 120px;
+height: 40px;
+background-color: #333333; 
+border: #000000 solid 5px;
+border-radius: 5px;
+padding: 10px;
+margin-bottom: 15px;
+}
+
+#pokeImg{
+width: 200px;
+display: block;
+margin: 0px auto;
+}
+

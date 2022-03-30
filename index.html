@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Pokedex</title>
+  </head>
+  <body>
+
+    <!-- Pokedex -->  
+        <div class="container  contMain">
+            <div class="row">
+                <!-- Left Side -->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  back">
+                    <!-- Top Buttons -->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  divBottoms">
+                        <!-- Blue big circle -->
+                        <div class="cBlue"></div>
+                        <!-- Red little circle -->
+                        <div class="cRed"></div>
+                        <!-- Yellow little circle -->
+                        <div class="cYellow"></div>
+                        <!-- Green little circle -->
+                        <div class="cGreen"></div>
+                    </div>
+                    <!-- Screen Img -->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <!-- Margin ext -->
+                        <div class="screen">
+                            <!-- Top bottoms red -->
+                            <div style="display: flex; justify-content: center;">
+                                <div class="cRedL"></div>
+                                <div class="cRedL"></div>
+                            </div>
+                            <!-- Screen Img -->
+                            <div class="card screenImg" >
+                                <img src="./assets/img/pokedeex.png" class="card-img-center img-fluid" alt="PokeImagen" id="pokeImg" >
+                            </div>
+                            <!-- Low bottoms -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="cRedLow"></div> 
+                                </div>
+                                <div class="col-3"></div>
+                                <div class="col-3">
+                                    <div class="cuadrado"></div>
+                                    <div class="cuadrado"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Low Buttoms Img -->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-2" style="padding-left: 20px;">
+                                <div class="circleMando"></div>
+                            </div>
+                            <div class="col-8" style="display: flex; justify-content: center;">
+                                <div class="recta"></div>
+                                <div class="recta2"></div>
+                            </div>
+                            <div class="col-2"></div>
+                            
+                        </div>
+                    </div>
+                    <!-- Buscador -->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-8 p-4">
+                                <form class="form-floating">
+                                    <input type="text" class="form-control" id="searchPoke" placeholder="Pikachu" >
+                                    <label for="floatingInputValue">Search a Pokemon</label>
+                                </form>
+                            </div>
+                            <div class="col-4">
+                                <form>
+                                    <button style="background-color: rgba(240, 248, 255, 0); border: 0px;" onclick="fetchPokemon()"><audio id="click" src="./assets/audio/poke.mp3"></audio>
+                                        <div class="cross"></div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Right Side -->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  back">
+                    <!-- Data Side -->
+                    <div class="row dataSide">
+                        <!-- Inputs Dates -->
+                        <div class="col-12">
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="name"  disabled>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Type</span>
+                                <input type="text" class="form-control  typePoke" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="type" disabled>
+                              </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Abilities</span>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="abilities" disabled>
+                              </div>
+                        </div>
+                    </div>
+                    <!-- Progress dates -->
+                    <div class="row">
+                        <div class="col-12 contProgress">
+
+                            <div class="col-12">
+                               <h6>Hp</h6>
+                               <div class="progress" style="height: 10px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="hp"></div>
+                               </div>
+                            </div>
+                            <div class="col-12">
+                                <h6>Attack</h6>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="attack"></div>
+                               </div>
+                            </div>
+                            <div class="col-12">
+                                <h6>Defense</h6>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="defense"></div>
+                               </div>
+                            </div>
+                            <div class="col-12">
+                                <h6>Special-attack</h6>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="specialAttack"></div>
+                               </div>
+                            </div>
+                            <div class="col-12">
+                                <h6>Special-defense</h6>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="specialDefense"></div>
+                               </div>
+                            </div>
+                            <div class="col-12">
+                                <h6>Speed</h6>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="speed"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row contButtomsRight">
+                        <div class="col-6" style="display: flex; justify-content: center;">
+                            <div class="square"></div>
+                            <div class="square"></div>
+                        </div>
+                        <div class="col-6" style="display: flex; justify-content:flex-end;">
+                            <div class="cicleYellowRight"></div>
+                        </div>
+                    </div>
+                    <div class="row  contButtomsRight">
+                        <div class="col-6">
+                            <div class="rectangle"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="rectangle"></div>
+                        </div>
+                    </div>
+                </div>                   
+            </div>
+        </div>
+    </div>
+
+    <!-- Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Js -->
+    <script src="./assets/js/app.js"></script>    
+  </body>
+</html>
